@@ -1,0 +1,11 @@
+appId: com.anonymous.chessgroundexample
+---
+- launchApp
+- assertVisible: "react-native-chessground"
+- assertVisible: "Next Move"
+- tapOn: "Next Move"
+- assertVisible: "Move 2"
+- tapOn: "Flip"
+- tapOn: "Reset"
+- assertVisible: "Move 1"
+- takeScreenshot: smoke-test-final
