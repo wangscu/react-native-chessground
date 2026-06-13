@@ -1,5 +1,5 @@
 import React, { useRef, useState, useCallback } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Chessboard, type ChessboardRef, uciToMove } from 'react-native-chessground';
 
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
-      <SafeAreaView style={styles.safe}>
+      <View style={styles.safe}>
         <Text style={styles.title}>react-native-chessground</Text>
 
         <View style={styles.boardContainer}>
@@ -68,7 +68,7 @@ export default function App() {
             <Text style={styles.buttonText}>Reset</Text>
           </TouchableOpacity>
         </View>
-      </SafeAreaView>
+      </View>
     </GestureHandlerRootView>
   );
 }

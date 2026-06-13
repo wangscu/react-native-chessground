@@ -1,4 +1,4 @@
-appId: com.anonymous.chessgroundexample
+appId: com.chessground.example
 ---
 - launchApp
 - assertVisible: "react-native-chessground"

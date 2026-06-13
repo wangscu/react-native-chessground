@@ -1,0 +1,24 @@
+# Maestro E2E smoke test for react-native-chessground (Android)
+appId: com.chessground.example
+---
+- runFlow: ../utils/launch.yaml
+
+# Basic UI visibility
+- assertVisible: "react-native-chessground"
+- assertVisible: "Move 1 / 12"
+- assertVisible: "Next Move"
+- assertVisible: "Flip"
+- assertVisible: "Reset"
+
+# Play the first move and verify counter updates
+- tapOn: "Next Move"
+- assertVisible: "Move 2 / 12"
+
+# Flip the board
+- tapOn: "Flip"
+
+# Reset and verify counter returns to start
+- tapOn: "Reset"
+- assertVisible: "Move 1 / 12"
+
+- takeScreenshot: smoke-test-final

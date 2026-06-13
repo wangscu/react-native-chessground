@@ -1,0 +1,11 @@
+# Shared launch flow for react-native-chessground E2E tests
+appId: com.chessground.example
+---
+- launchApp
+
+# Dismiss the Android 16 KB page-size compatibility dialog if it appears
+- tapOn:
+    text: "OK"
+    optional: true
+
+- assertVisible: "react-native-chessground"

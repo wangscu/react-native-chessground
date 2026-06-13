@@ -5,9 +5,15 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "platforms": ["ios", "android"],
+    "splash": {
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.chessground.example"
+    },
+    "android": {
+      "package": "com.chessground.example"
     }
   }
 }
